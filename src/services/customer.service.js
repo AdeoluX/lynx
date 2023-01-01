@@ -26,7 +26,7 @@ class CustomerService {
     abortIf(!user, httpStatus.NOT_FOUND, 'User Does not exist');
     user.links.push(link);
     user.save();
-    return user;
+    return link;
   };
 
   addPicturesToLink = async (files, data, link_id) => {
